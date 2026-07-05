@@ -1,0 +1,15 @@
+[
+  {
+    "name": "EduMatch KZ",
+    "description": "An intelligent web platform for searching grants and educational opportunities in Kazakhstan, featuring automated filtering, AI consultancy, and peer matching.",
+    "features": [
+      "Automated evaluation calculating grant admission chances based on UNT/KT scores and quotas",
+      "Smart roommate matching based on lifestyle habits, budget, and daily routines",
+      "Context-aware AI assistant providing 24/7 personalized guidance on admission rules"
+    ],
+    "techStack": ["React", "Java", "Spring Boot", "PostgreSQL"],
+    "imageUrls": ["images/project2.jpg"],
+    "githubUrl": "https://github.com/aruka1sh/edumatch-project",
+    "liveDemoUrl": ""
+  }
+]
