@@ -1,19 +1,20 @@
-import React from 'react';
 import axios from 'axios';
 
+// Under Vercel, static JSON files in the public directory can be read directly via HTTP GET.
+// Dynamic API requests like sending Telegram messages will route through /api/contact serverless function.
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || '',
+  baseURL: '',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export const getProfile = () => api.get('/api/profile').then(res => res.data);
-export const getEducation = () => api.get('/api/education').then(res => res.data);
-export const getExperience = () => api.get('/api/experience').then(res => res.data);
-export const getSkills = () => api.get('/api/skills').then(res => res.data);
-export const getProjects = () => api.get('/api/projects').then(res => res.data);
-export const getLanguages = () => api.get('/api/languages').then(res => res.data);
+export const getProfile = () => api.get('/data/profile.json').then(res => res.data);
+export const getEducation = () => api.get('/data/education.json').then(res => res.data);
+export const getExperience = () => api.get('/data/experience.json').then(res => res.data);
+export const getSkills = () => api.get('/data/skills.json').then(res => res.data);
+export const getProjects = () => api.get('/data/projects.json').then(res => res.data);
+export const getLanguages = () => api.get('/data/languages.json').then(res => res.data);
 export const submitContactMessage = (data) => api.post('/api/contact', data).then(res => res.data);
 
 export default api;
